@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+import site from '../data/site.json';
+
+// Sections with no copy yet are left out, so the live site never shows placeholders.
+const description = `${site.subline} ${site.headline}`;
+---
+
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet" />
+		<title>{site.name} · {site.keywordTitle}</title>
+		<meta name="description" content={description} />
+		<meta property="og:title" content={`${site.name} · Senior Product Manager`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content="https://philparsons.me" />
+		<meta property="og:type" content="website" />
+	</head>
+	<body>
+		<header class="wrap nav">
+			<a class="name" href="/">{site.name}</a>
+			<a href={site.linkedin} rel="me">LinkedIn</a>
+		</header>
+
+		<main class="wrap">
+			<section class="hero">
+				<p class="keywords">{site.keywordTitle}</p>
+				<h1>{site.headline}</h1>
+				<p class="subline">{site.subline}</p>
+				{site.cta && <a class="cta" href={site.cta.href}>{site.cta.label}</a>}
+			</section>
+
+			{site.proofPoints.length > 0 && (
+				<section>
+					<h2>Proof</h2>
+					<ul class="proof">
+						{site.proofPoints.map((p) => (
+							<li><strong>{p.stat}</strong><span>{p.text}</span></li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{site.whereBest && (
+				<section>
+					<h2>Where I work best</h2>
+					<p>{site.whereBest}</p>
+				</section>
+			)}
+
+			{site.howIWork.length > 0 && (
+				<section>
+					<h2>How I work</h2>
+					<ol class="steps">
+						{site.howIWork.map((s) => (
+							<li><strong>{s.title}</strong><span>{s.text}</span></li>
+						))}
+					</ol>
+				</section>
+			)}
+
+			{site.bio && (
+				<section>
+					<h2>About</h2>
+					<p>{site.bio}</p>
+				</section>
+			)}
+
+			{site.rightNow && (
+				<section>
+					<h2>Right now</h2>
+					<p>{site.rightNow}</p>
+					{site.cta && <a class="cta" href={site.cta.href}>{site.cta.label}</a>}
+				</section>
+			)}
+		</main>
+
+		<footer class="wrap foot">
+			<span>© {new Date().getFullYear()} {site.name}</span>
+			<a href={site.linkedin} rel="me">LinkedIn</a>
+		</footer>
+	</body>
+</html>
+
+<style>
+	.nav, .foot {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding-block: 1.5rem;
+	}
+	.name { color: var(--fg); font-weight: 600; text-decoration: none; }
+	.hero { padding-block: 4rem 3rem; display: grid; gap: 1rem; }
+	.keywords {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.875rem;
+		letter-spacing: 0.02em;
+	}
+	h1 {
+		margin: 0;
+		font-size: clamp(2rem, 6vw, 3.25rem);
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		text-wrap: balance;
+	}
+	.subline { margin: 0; font-size: 1.25rem; color: var(--muted); }
+	.cta {
+		justify-self: start;
+		display: inline-block;
+		margin-top: 0.5rem;
+		padding: 0.6rem 1.25rem;
+		border-radius: 8px;
+		background: var(--accent);
+		color: var(--bg);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	section { padding-block: 2rem; border-top: 1px solid var(--line); }
+	.hero { border-top: 0; }
+	h2 { font-size: 1.125rem; margin: 0 0 1rem; }
+	.proof, .steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 1rem; }
+	.proof li, .steps li { display: grid; gap: 0.25rem; }
+	.proof strong { font-size: 1.5rem; }
+	.foot { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
+</style>
