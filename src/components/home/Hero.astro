@@ -29,7 +29,8 @@ import { siteConfig } from '@/config/site';
   )}
 
   <h1 id="hero-title" class="rise mt-6 max-w-[20ch] text-display" style="--rise-step: 1">
-    {hero.title} <span class="serif">{hero.highlight}</span>
+    {hero.title}
+    {hero.highlight && <span class="serif">{hero.highlight}</span>}
   </h1>
 
   <div class="mt-10 grid gap-12 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
