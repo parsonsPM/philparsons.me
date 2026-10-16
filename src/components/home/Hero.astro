@@ -28,12 +28,18 @@ import { siteConfig } from '@/config/site';
     </p>
   )}
 
-  <h1 id="hero-title" class="rise mt-6 max-w-[20ch] text-display" style="--rise-step: 1">
+  <h1 id="hero-title" class="rise mt-12 max-w-[20ch] sm:mt-16 text-display" style="--rise-step: 1">
     {hero.title}
-    {hero.highlight && <span class="serif">{hero.highlight}</span>}
+    {hero.highlight && (
+      <>
+        {' '}
+        <span class="serif">{hero.highlight}</span>
+      </>
+    )}
+    {hero.after && <> {hero.after}</>}
   </h1>
 
-  <div class="mt-10 grid gap-12 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+  <div class="mt-6 grid gap-12 lg:mt-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
     <div class="rise" style="--rise-step: 2">
       <p class="max-w-xl text-lead text-body">{hero.text}</p>
       {(hero.primary || hero.secondary) && (

@@ -23,9 +23,10 @@ interface Quote {
 export const hero = {
   /** Small keyword line above the headline. */
   role: 'Contract Senior Product Manager · Customer experience · AI & automation',
-  /** The headline. `highlight` (optional) follows it in the serif accent. */
-  title: 'The design-led product manager.',
-  highlight: '',
+  /** The headline: `title`, then `highlight` in the serif accent, then `after`. Each is optional. */
+  title: 'The design-led',
+  highlight: 'product manager.',
+  after: '',
   text: 'Fluent in design, engineering and business.',
   primary: null as Link | null,
   secondary: null as Link | null,
