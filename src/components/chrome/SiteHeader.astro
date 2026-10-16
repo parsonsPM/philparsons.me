@@ -1,0 +1,84 @@
+---
+import ThemeToggle from '@/components/chrome/ThemeToggle.astro';
+import Logomark from '@/components/ui/Logomark.astro';
+import { navigation, siteConfig } from '@/config/site';
+
+const path = Astro.url.pathname;
+const current = (href: string) => (path === href ? 'page' : path.startsWith(href) ? 'true' : undefined);
+---
+
+<header class="site-header sticky top-0 z-40 h-(--header-h) border-b border-transparent bg-canvas">
+  <div class="shell flex h-full items-center gap-4">
+    <a href="/" class="flex items-center gap-2.5 rounded-lg text-[1.15rem] font-semibold tracking-[-0.03em]">
+      <Logomark />
+      <span>{siteConfig.name}</span>
+      <span class="sr-only">, home</span>
+    </a>
+
+    {navigation.length > 0 && (
+      <nav aria-label="Main" class="ml-auto">
+        <ul class="flex items-center gap-1">
+          {navigation.map((link) => (
+            <li>
+              <a href={link.href} class="nav-link" aria-current={current(link.href)}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
+    <div class="ml-auto flex items-center gap-1.5 sm:ml-2">
+      <ThemeToggle />
+      {siteConfig.action.href && (
+        <a class="btn btn-primary btn-sm ml-1 hidden sm:inline-flex" href={siteConfig.action.href}>
+          {siteConfig.action.label}
+        </a>
+      )}
+    </div>
+  </div>
+</header>
+
+<style>
+  @supports (animation-timeline: scroll()) {
+    .site-header {
+      animation: header-line linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 4rem;
+    }
+  }
+
+  @keyframes header-line {
+    to {
+      border-bottom-color: var(--line);
+    }
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    color: var(--body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition:
+      color 160ms ease,
+      background-color 160ms ease;
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current] {
+    color: var(--ink);
+    background: var(--sunken);
+  }
+
+  @media (max-width: 30rem) {
+    .nav-link {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
