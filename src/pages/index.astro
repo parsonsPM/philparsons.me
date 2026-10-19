@@ -1,5 +1,4 @@
 ---
-import Bio from '@/components/home/Bio.astro';
 import Hero from '@/components/home/Hero.astro';
 import Services from '@/components/home/Services.astro';
 import Testimonials from '@/components/home/Testimonials.astro';
@@ -16,7 +15,6 @@ const selected = projects.toSorted((a, b) => Number(b.data.featured) - Number(a.
 
 <BaseLayout>
   <Hero />
-  <Bio />
 
   {projects.length > 0 && (
     <section id="work" class="shell" aria-labelledby="work-title">

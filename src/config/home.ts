@@ -27,18 +27,11 @@ export const hero = {
   title: 'The design-led',
   highlight: 'product manager.',
   after: '',
-  text: 'Fluent in design, engineering and business.',
+  text: "A UX designer turned product manager, with 18 years across travel marketplaces, payments and retail. I'm usually brought in when the customer has got lost behind the technology or the process.",
   primary: { label: 'Get in touch', href: 'mailto:hello@philparsons.me' } as Link | null,
-  secondary: null as Link | null,
+  secondary: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/phil-parsons' } as Link | null,
   /** Proof points. */
   facts: [] as { value: string; label: string }[],
-};
-
-/** Short bio, under the hero. */
-export const bio = {
-  eyebrow: 'About',
-  text: "I started out as a UX designer and moved into product management to be closer to where the decisions get made. In 18 years across travel marketplaces, payments and retail, I've usually been brought in when the customer has got lost behind the technology or the operations.",
-  link: { label: 'More on LinkedIn', href: 'https://www.linkedin.com/in/phil-parsons' } as Link | null,
 };
 
 export const work = {
