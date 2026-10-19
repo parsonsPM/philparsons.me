@@ -51,9 +51,25 @@ export const work = {
 
 /** "How I work". */
 export const services = {
-  eyebrow: '',
-  title: '',
-  items: [] as Item[],
+  eyebrow: 'How I can help',
+  title: 'Where I come in.',
+  items: [
+    {
+      icon: 'lightbulb',
+      title: 'Starting something new',
+      text: "The ask is ambiguous and nobody has defined the problem yet. I work out what's worth solving, and for whom, then shape the first version around it.",
+    },
+    {
+      icon: 'workflow',
+      title: 'Getting something unstuck',
+      text: "It's live, but it isn't working for customers and nobody's sure why. I find where it breaks, test the fixes and get the numbers moving.",
+    },
+    {
+      icon: 'layers',
+      title: 'Scaling past the first version',
+      text: 'It works for one case, one market or one kind of customer. I help take it to many without losing what made it work.',
+    },
+  ] as Item[],
 };
 
 export const testimonials = {
