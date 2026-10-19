@@ -11,7 +11,7 @@ export const siteConfig = {
   name: 'Phil Parsons',
   title: 'Phil Parsons - Contract Senior Product Manager',
   description:
-    'Phil Parsons, the design-led product manager. Fluent in design, engineering and business. Contract Senior Product Manager for customer experience, AI and automation.',
+    'Phil Parsons, the design-led product manager. A UX designer turned product manager with 18 years across travel marketplaces, payments and retail. Contract Senior Product Manager for customer experience, AI and automation.',
   siteUrl: 'https://philparsons.me',
   language: 'en-GB',
   locale: 'en_GB',
