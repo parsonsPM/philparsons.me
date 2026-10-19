@@ -1,0 +1,21 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+import { bio } from '@/config/home';
+---
+
+{bio.text && (
+  <section class="shell" aria-labelledby="bio-title">
+    <div class="reveal max-w-2xl border-t border-line pt-10">
+      <h2 id="bio-title" class="eyebrow">
+        {bio.eyebrow}
+      </h2>
+      <p class="mt-5 text-lead text-body">{bio.text}</p>
+      {bio.link && (
+        <a class="btn btn-ghost mt-6 -ml-4" href={bio.link.href} rel="me noopener">
+          {bio.link.label}
+          <Icon name="arrow-up-right" class="icon-nudge-diagonal size-4" />
+        </a>
+      )}
+    </div>
+  </section>
+)}

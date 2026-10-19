@@ -34,6 +34,13 @@ export const hero = {
   facts: [] as { value: string; label: string }[],
 };
 
+/** Short bio, under the hero. */
+export const bio = {
+  eyebrow: 'About',
+  text: "I started out as a UX designer and moved into product management to be closer to where the decisions get made. In 18 years across travel marketplaces, payments and retail, I've usually been brought in when the customer has got lost behind the technology or the operations.",
+  link: { label: 'More on LinkedIn', href: 'https://www.linkedin.com/in/phil-parsons' } as Link | null,
+};
+
 export const work = {
   eyebrow: 'Selected work',
   title: 'Case studies',
