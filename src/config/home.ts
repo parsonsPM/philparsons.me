@@ -28,7 +28,7 @@ export const hero = {
   highlight: 'product manager.',
   after: '',
   text: 'Fluent in design, engineering and business.',
-  primary: null as Link | null,
+  primary: { label: 'Get in touch', href: 'mailto:hello@philparsons.me' } as Link | null,
   secondary: null as Link | null,
   /** Proof points. */
   facts: [] as { value: string; label: string }[],

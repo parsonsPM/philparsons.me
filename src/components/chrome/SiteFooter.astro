@@ -14,7 +14,7 @@ const { email } = siteConfig.author;
 const year = new Date().getFullYear();
 ---
 
-{showClosing && email && (
+{showClosing && email && closing.title && (
   <section class="shell mt-24 sm:mt-32" aria-labelledby="closing-title">
     <div class="relative overflow-hidden rounded-[2rem] bg-night px-6 py-14 text-night-ink sm:px-12 sm:py-20 lg:px-20 lg:py-24">
       <div class="closing-grid" aria-hidden="true" />

@@ -24,7 +24,7 @@ export const siteConfig = {
     /** Shown in the footer as "based in …". Leave empty to hide. */
     location: '',
     /** Drives the closing "Let's talk" panel. Leave empty to hide it. */
-    email: '',
+    email: 'hello@philparsons.me',
   },
 
   /** The pill above the homepage headline ("Right now"). Set `enabled: false` to remove it. */
@@ -34,7 +34,7 @@ export const siteConfig = {
   },
 
   /** The button at the end of the header and in the mobile menu. Leave `href` empty to hide it. */
-  action: { label: '', href: '' },
+  action: { label: 'Get in touch', href: 'mailto:hello@philparsons.me' },
 
   /** A PDF in `public/`, offered on the resume page. Leave empty to hide the button. */
   resumePdf: '',
