@@ -11,7 +11,7 @@ const current = (href: string) => (path === href ? 'page' : path.startsWith(href
   <div class="shell flex h-full items-center gap-4">
     <a href="/" class="flex items-center gap-2.5 rounded-lg text-[1.15rem] font-semibold tracking-[-0.03em]">
       <Logomark />
-      <span>{siteConfig.name}</span>
+      <span class="uppercase">{siteConfig.name}</span>
       <span class="sr-only">, home</span>
     </a>
 

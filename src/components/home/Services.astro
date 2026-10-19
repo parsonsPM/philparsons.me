@@ -2,10 +2,17 @@
 import Icon from '@/components/ui/Icon.astro';
 import SectionHead from '@/components/ui/SectionHead.astro';
 import { services } from '@/config/home';
+
+interface Props {
+  /** True when this section follows the hero directly: the hero's bottom padding already spaces it. */
+  afterHero?: boolean;
+}
+
+const { afterHero = false } = Astro.props;
 ---
 
 {services.items.length > 0 && (
-  <section class="shell mt-28 sm:mt-36" aria-labelledby="services-title">
+  <section class:list={['shell', !afterHero && 'mt-28 sm:mt-36']} aria-labelledby="services-title">
     <SectionHead id="services-title" eyebrow={services.eyebrow} title={services.title} />
     <ul
       class:list={[
