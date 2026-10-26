@@ -44,8 +44,8 @@ export const work = {
 
 /** "How I can help": scenario questions the visitor might be asking. */
 export const services = {
-  eyebrow: 'How I can help',
-  title: 'Where I come in.',
+  eyebrow: 'Where I come in',
+  title: 'Getting products moving, customers in view, teams aligned.',
   items: [
     {
       icon: 'lightbulb',
@@ -63,6 +63,30 @@ export const services = {
       text: "Having worked across design, engineering and the business, I bring each side together around one picture of the customer and a plan they can all explain. The habits stay after I've gone.",
     },
   ] as Item[],
+};
+
+/** "How I work": numbered steps, styled like the theme's About page principles. */
+export const howIWork = {
+  eyebrow: 'How I work',
+  title: 'Learn first, test everything, back the team.',
+  items: [
+    {
+      title: 'Dig around first',
+      text: 'I get to know your team, your customers, your data and how decisions really get made before suggesting where to focus.',
+    },
+    {
+      title: 'Bring the customer into the room',
+      text: 'Customers and users take part in the work itself, in research, design sessions and even the team. On one programme, customer service agents sat in our scrum teams and checked the software as it was built.',
+    },
+    {
+      title: 'Back the experts',
+      text: 'Designers and engineers know their craft. I give them clear problems, room to solve them and cover when they need it.',
+    },
+    {
+      title: 'Ship small, learn fast',
+      text: 'New features go out as experiments, so every next step is backed by how real customers use them.',
+    },
+  ] as { title: string; text: string }[],
 };
 
 export const testimonials = {

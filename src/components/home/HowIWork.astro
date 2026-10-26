@@ -1,0 +1,22 @@
+---
+import SectionHead from '@/components/ui/SectionHead.astro';
+import { howIWork } from '@/config/home';
+---
+
+{howIWork.items.length > 0 && (
+  <section class="shell mt-28 sm:mt-36" aria-labelledby="how-i-work-title">
+    <SectionHead id="how-i-work-title" eyebrow={howIWork.eyebrow} title={howIWork.title} />
+    {/* Same numbered cards as the theme's About page principles. */}
+    <ol class:list={['mt-12 grid gap-5', howIWork.items.length === 3 ? 'md:grid-cols-3' : 'sm:grid-cols-2 lg:grid-cols-4']}>
+      {howIWork.items.map((item, index) => (
+        <li class="reveal rounded-card border border-line bg-surface p-7">
+          <span class="font-serif text-3xl text-muted italic" aria-hidden="true">
+            {String(index + 1).padStart(2, '0')}
+          </span>
+          <h3 class="mt-8 text-title">{item.title}</h3>
+          <p class="mt-3 text-muted">{item.text}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}

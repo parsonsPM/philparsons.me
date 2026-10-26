@@ -1,6 +1,7 @@
 ---
 import Hero from '@/components/home/Hero.astro';
 import Services from '@/components/home/Services.astro';
+import HowIWork from '@/components/home/HowIWork.astro';
 import Testimonials from '@/components/home/Testimonials.astro';
 import Icon from '@/components/ui/Icon.astro';
 import SectionHead from '@/components/ui/SectionHead.astro';
@@ -35,5 +36,6 @@ const selected = projects.toSorted((a, b) => Number(b.data.featured) - Number(a.
   )}
 
   <Services afterHero={projects.length === 0} />
+  <HowIWork />
   <Testimonials />
 </BaseLayout>
