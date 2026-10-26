@@ -42,25 +42,25 @@ export const work = {
   limit: 4,
 };
 
-/** "How I work". */
+/** "How I can help": scenario questions the visitor might be asking. */
 export const services = {
   eyebrow: 'How I can help',
   title: 'Where I come in.',
   items: [
     {
       icon: 'lightbulb',
-      title: 'Starting something new',
-      text: "The ask is ambiguous and nobody has defined the problem yet. I work out what's worth solving, and for whom, then shape the first version around it.",
+      title: 'Need to kickstart a product?',
+      text: "Whether it's a new venture or an initiative that has stalled, I work out where the team should focus first, set the direction and get results you can show early.",
+    },
+    {
+      icon: 'pen-tool',
+      title: 'Lost sight of the customer?',
+      text: "I'll bring them back into view. Using data, research and experiments, I show your team what each customer segment needs and make sure it shapes what gets built. I work closely with your designers to get their best work.",
     },
     {
       icon: 'workflow',
-      title: 'Getting something unstuck',
-      text: "It's live, but it isn't working for customers and nobody's sure why. I find where it breaks, test the fixes and get the numbers moving.",
-    },
-    {
-      icon: 'layers',
-      title: 'Scaling past the first version',
-      text: 'It works for one case, one market or one kind of customer. I help take it to many without losing what made it work.',
+      title: 'Need to align your teams?',
+      text: "I'll get everyone pulling the same way. Having worked across design, engineering and the business, I bring each side behind one picture of the customer and a plan they can all explain, and leave habits that last after I've gone.",
     },
   ] as Item[],
 };
