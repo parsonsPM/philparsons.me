@@ -55,7 +55,7 @@ export const services = {
     {
       icon: 'pen-tool',
       title: 'Lost sight of the customer?',
-      text: "I'll bring them back into view. Using data, research and experiments, I show your team what each customer segment needs and make sure it shapes what gets built. I work closely with your designers to get their best work.",
+      text: "I'll bring them back into view using data, research and experimentation. I'll show your team what each customer segment needs and make sure it shapes what gets built. I work closely with your designers to get their best work.",
     },
     {
       icon: 'workflow',
