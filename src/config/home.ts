@@ -68,25 +68,29 @@ export const services = {
 /** "How I work": numbered steps, styled like the theme's About page principles. */
 export const howIWork = {
   eyebrow: 'How I work',
-  title: 'Learn first, test everything, back the team.',
+  title: 'Learn first, back the team, then scale.',
   items: [
     {
       title: 'Dig around first',
       text: 'I get to know your team, your customers, your data and how decisions really get made before suggesting where to focus.',
+      link: '',
     },
     {
-      title: 'Bring the customer into the room',
-      text: 'Customers and users take part in the work itself, in research, design sessions and even the team. On one programme, customer service agents sat in our scrum teams and checked the software as it was built.',
+      title: 'Bring users into the room',
+      text: "Users join the work from day one, in research, design sessions and even the team itself, so decisions get checked against real needs as they're made.",
+      link: '',
     },
     {
       title: 'Back the experts',
-      text: 'Designers and engineers know their craft. I give them clear problems, room to solve them and cover when they need it.',
+      text: "Designers and engineers know their craft. I give them clear problems and room to focus, coaching the team's practices so they keep growing long after the project.",
+      link: '',
     },
     {
-      title: 'Ship small, learn fast',
-      text: 'New features go out as experiments, so every next step is backed by how real customers use them.',
+      title: 'Prove it fast, build to last',
+      text: 'A quick first version proves the direction. Then the foundations come first, so the product can grow without rework.',
+      link: '',
     },
-  ] as { title: string; text: string }[],
+  ] as { title: string; text: string; link?: string }[],
 };
 
 export const testimonials = {
